@@ -1,3 +1,4 @@
+// export default App;
 import { useEffect, useState } from "react";
 import "./App.css";
 import { frases } from "./Data";
@@ -5,20 +6,18 @@ import { frases } from "./Data";
 function App() {
   const [frasess, setFrasess] = useState(frases);
   const [loading, setLoading] = useState(false);
-
+  const [frace, setFrases] = useState("");
   const getRandomFrase = () => {
     setLoading(true);
-
     const randomFrase = Math.floor(Math.random() * frases.length);
-
-    setFrasess(frasess[randomFrase]);
-
+    setFrases(frasess[randomFrase]);
     setLoading(false);
   };
 
   useEffect(() => {
-    getRandomFrase();
-  }, []);
+   getRandomFrase();
+  }, [])
+  
 
   return (
     <div className="App">
@@ -26,7 +25,7 @@ function App() {
         <p>ثوانى يعم بيحمل, ما شاء الله النت روعة😂🤣</p>
       ) : (
         <div className="frase">
-          <p className="frase-text">{frasess.frase}</p>
+          <p className="frase-text">{frace.frase}</p>
           <button onClick={getRandomFrase} className="button-5" role="button">
             😎 اللى بعده 👀
           </button>
@@ -34,9 +33,12 @@ function App() {
       )}
 
       <p className="copyright">&copy; Mohamed Khalifa</p>
-      <p className="copyright-mo">الاسءلة من محمد محروس😎. فمحدش يكلمنى عليهم😂</p>
+      <p className="copyright-mo">
+        الاسءلة من محمد محروس😎. فمحدش يكلمنى عليهم😂
+      </p>
     </div>
   );
 }
 
 export default App;
+
