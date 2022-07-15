@@ -34,6 +34,7 @@ function App() {
       )}
 
       <p className="copyright">&copy; Mohamed Khalifa</p>
+      <p className="copyright-mo">الاسءلة من محمد محروس😎. فمحدش يكلمنى عليهم😂</p>
     </div>
   );
 }

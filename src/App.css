@@ -99,3 +99,8 @@ body {
   bottom: 0.3rem;
   color: #5e5e5e;
 }
+.copyright-mo {
+  position: absolute;
+  bottom: 2rem;
+  color: #5e5e5e;
+}
